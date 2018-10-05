@@ -22,6 +22,7 @@ class Stack  {
     this.top = node.next; //point the pointer to the next item and that becomes the top
     return node.data;
   }
+  
 
 }
 
