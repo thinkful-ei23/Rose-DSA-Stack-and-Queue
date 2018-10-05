@@ -5,7 +5,6 @@
 const Stack = require ('./stackClass');
 const stack = new Stack();
 
-
 function main() {
   let StarTrek = new Stack();
 
@@ -17,15 +16,23 @@ function main() {
     return currNode.data; 
   }
 
+  function display(stack) {
+    let currNode = stack.top;
+    while(currNode !== null) {
+      console.log(currNode.data);
+      currNode = currNode.next; 
+    }
+  }
+
   StarTrek.push('Kirk');
   StarTrek.push('Spock');
   StarTrek.push('McCoy');
   StarTrek.push('Scotty');
 
   peek(StarTrek);
-
-  console.log(peek(StarTrek));
-  console.log(JSON.stringify(StarTrek));
+  display(StarTrek);
+  // console.log(peek(StarTrek));
+  // console.log(JSON.stringify(StarTrek));
   
 }
 
